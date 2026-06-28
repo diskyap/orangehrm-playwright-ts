@@ -41,6 +41,50 @@ npx playwright test
 
 Projek ini menerapkan pemisahan kendali (Separation of Concerns) menggunakan arsitektur POM yang rapi untuk mempermudah pemeliharaan jangka panjang:
 
+```
+├── 📁 api
+│   ├── 📁 clients
+│   ├── 📁 models
+│   └── 📁 services
+├── 📁 config
+│   └── 📄 test-config.ts
+├── 📁 fixtures
+│   ├── 📄 api-fixtures.ts
+│   └── 📄 ui-fixtures.ts
+├── 📁 pages
+│   ├── 📄 LoginPage.ts
+│   └── 📄 PimPage.ts
+├── 📁 playwright-report
+│   └── 🌐 index.html
+├── 📁 storage
+│   └── 📁 .auth
+│       └── ⚙️ user.json
+├── 📁 test-data
+│   └── ⚙️ users.json
+├── 📁 tests
+│   ├── 📁 api
+│   ├── 📁 e2e
+│   │   └── 📄 orange.pim.spec.ts
+│   ├── 📁 setup
+│   │   └── 📄 auth.setup.spec.ts
+│   ├── 📁 smoke
+│   └── 📁 ui
+├── 📁 utils
+│   ├── 📄 assertions.ts
+│   ├── 📄 dataGenerator.ts
+│   ├── 📄 env.ts
+│   ├── 📄 logger.ts
+│   └── 📄 waitUtils.ts
+├── ⚙️ .gitignore
+├── ⚙️ .prettierrc
+├── 📝 README.md
+├── 📄 eslint.config.js
+├── ⚙️ package-lock.json
+├── ⚙️ package.json
+├── 📄 playwright.config.ts
+└── ⚙️ tsconfig.json
+```
+
 ## Strategi Locator
 
 Guna menghindari masalah klasik pengujian otomasi seperti test flakiness akibat perubahan kode di sisi front-end, projek ini menerapkan aturan pemilihan locator yang ketat:

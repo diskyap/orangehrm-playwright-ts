@@ -9,7 +9,7 @@ test('Technical Test Full Flow: Create 5, Delete 4, Verify 1 Remaining', async (
 
     // STEP 1: LOGIN KE SISTEM ORANGEHRM
     await loginPage.goto()
-    await loginPage.login(env.USERNAME, env.PASSWORD)
+    await loginPage.login(env.ORANGEHRM_USERNAME, env.ORANGEHRM_PASSWORD)
 
     // STEP 2: LOOPING TAMBAH 5 KARYAWAN BERGANTIAN
     for (let i = 0; i < totalTargetKaryawan; i++) {

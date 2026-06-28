@@ -19,6 +19,6 @@ export const env = {
     API_URL: required('API_URL'),
     BASE_URL: required('BASE_URL'),
     HEADLESS: required('HEADLESS'),
-    USERNAME: required('USERNAME'),
-    PASSWORD: required('PASSWORD')
+    ORANGEHRM_USERNAME: required('ORANGEHRM_USERNAME'),
+    ORANGEHRM_PASSWORD: required('ORANGEHRM_PASSWORD')
 }

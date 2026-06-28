@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npx playwright test",
     "test:api": "npx playwright test --project=API",
-    "test:ui": "npx playwright test --project=UI --headed",
+    "test:ui": "npx playwright test --project=UI",
     "test:smoke:api": "npx playwright test --project=API --grep=@smoke",
     "test:smoke:ui": "npx playwright test --project=UI --grep=@smoke",
     "test:regression:api": "npx playwright test --project=API --grep=@regression",
