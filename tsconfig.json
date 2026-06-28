@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "strict": false,
+        "baseUrl": ".",
+        "paths": {
+            "@api/*": ["api/*"],
+            "@pages/*": ["pages/*"],
+            "@tests/*": ["tests/*"],
+            "@utils/*": ["utils/*"],
+            "@fixtures/*": ["fixtures/*"],
+            "@test-data/*": ["test-data/*"]
+        },
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "types": [
+            "node",
+            "@playwright/test"
+        ]
+    }
+}

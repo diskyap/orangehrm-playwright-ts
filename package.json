@@ -1,0 +1,38 @@
+{
+  "name": "boilerplate-playwright-framework-ts",
+  "version": "1.0.0",
+  "description": "Playwright Boilerplate Project with TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:api": "npx playwright test --project=API",
+    "test:ui": "npx playwright test --project=UI --headed",
+    "test:smoke:api": "npx playwright test --project=API --grep=@smoke",
+    "test:smoke:ui": "npx playwright test --project=UI --grep=@smoke",
+    "test:regression:api": "npx playwright test --project=API --grep=@regression",
+    "test:regression:ui": "npx playwright test --project=UI --grep=@regression",
+    "test:e2e:api": "npx playwright test --project=API --grep=@e2e",
+    "test:e2e:ui": "npx playwright test --project=UI --grep=@e2e",
+    "test:headed": "npx playwright test --project=UI --headed",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@typescript-eslint/eslint-plugin": "^8.62.0",
+    "@typescript-eslint/parser": "^8.62.0",
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.4.2",
+    "eslint": "^10.5.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.6",
+    "prettier": "^3.8.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.62.0"
+  }
+}
