@@ -2,7 +2,7 @@ import { defineConfig } from '@playwright/test'
 import { env } from '@utils/env'
 
 export default defineConfig({
-    fullyParallel: true,
+    fullyParallel: false,
     timeout: 60_000,
     expect: { timeout: 10_000 },
     retries: process.env.CI ? 2 : 0,
@@ -16,22 +16,24 @@ export default defineConfig({
     },
 
     projects: [
-        // {
-        //     name: 'setup',
-        //     testMatch: /.*\.setup\.spec\.ts/
-        // },
+        {
+            name: 'setup',
+            testDir: './tests/setup',
+            use: {
+                baseURL: env.BASE_URL
+            }
+        },
         {
             name: 'UI',
-            testDir: './tests',
+            testDir: './tests/e2e',
             use: {
                 baseURL: env.BASE_URL,
                 browserName: 'chromium',
                 headless: env.HEADLESS == 'false',
                 screenshot: 'only-on-failure',
                 video: 'retain-on-failure'
-                // storageState: 'storage/.auth/user.json'
-            }
-            // dependencies: ['setup']
+            },
+            dependencies: ['setup']
         }
         // {
         //     name: 'API',

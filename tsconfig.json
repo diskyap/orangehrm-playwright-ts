@@ -8,7 +8,8 @@
             "@tests/*": ["tests/*"],
             "@utils/*": ["utils/*"],
             "@fixtures/*": ["fixtures/*"],
-            "@test-data/*": ["test-data/*"]
+            "@test-data/*": ["test-data/*"],
+            "@config/*": ["config/*"]
         },
         "resolveJsonModule": true,
         "esModuleInterop": true,
